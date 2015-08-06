@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="When do you want to wake up ?"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose a wake up tone"
+        android:id="@+id/textView2"
+
+        android:layout_below="@+id/time"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="20dp" />
+
+
+
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/radioGroup"
+        android:layout_above="@+id/sleep"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2">
+
+        <RadioButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="dream" />
+        <RadioButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="space" />
+
+
+
+
+        <RadioButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="bright" />
+
+
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep !"
+        android:id="@+id/sleep"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="71dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hear tone"
+        android:id="@+id/play"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/sleep"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:timePickerMode="spinner"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/date"
+        android:layout_alignTop="@+id/time"
+        android:layout_toRightOf="@+id/time"
+        android:layout_toEndOf="@+id/time"
+        android:layout_above="@+id/textView2"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Today"/>
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Tomorrow"/>
+        </RadioGroup>
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/background"
+        android:src="@drawable/sleep"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="false"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/noise"
+        android:textColor="#fff"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/date"
+        android:layout_alignEnd="@+id/date" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/movement"
+        android:textColor="#fff"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_above="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/left"
+        android:textColor="#fff"
+        android:text=""
+        android:textSize="30sp"
+        android:layout_below="@+id/time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
